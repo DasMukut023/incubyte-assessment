@@ -24,5 +24,10 @@ describe("String Calculator",()=>{
     // test for newline delimiters
     test("testcases for handles newline delimiters",()=>{
         expect(addFn("1\n2,3")).toBe(6)
-    })
+    });
+
+    // test for different delimiters
+    test("testcases for support different newline delimiters",()=>{
+        expect(addFn("//;\n1,2")).toBe(3)
+    });
 })
