@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-import { addFn } from './utils/stringCalculator';
+import StringCalculator from './components/StringCalculator';
 
 function App() {
  
   return (
     <div>
-   
+      <StringCalculator />
     </div>
   );
 }
