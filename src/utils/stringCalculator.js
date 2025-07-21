@@ -1,7 +1,10 @@
 export const addFn=(numbers)=>{
     // console.log(numbers);
     if(numbers==="") return 0;
-    const numbersArr= numbers.split(",").map(Number);
+    const numbersArr= numbers.
+                      replace(/\n/g,",").
+                      split(",").
+                      map(Number);
    
     // console.log(numbersArr)
     const res= numbersArr.reduce((sum, number)=>sum+number,0);
