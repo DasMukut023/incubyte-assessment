@@ -1,8 +1,8 @@
 export const addFn=(numbers)=>{
-    console.log(numbers);
+    // console.log(numbers);
     if(numbers==="") return 0;
     let delimiter=/,|\n/;
-    if(numbers?.startsWith("//")){
+    if(numbers.startsWith("//")){
         const parts= numbers.split("\n")
         delimiter= new RegExp(parts[0].substring(2))
         numbers= parts[1]
@@ -11,9 +11,9 @@ export const addFn=(numbers)=>{
                       split(delimiter).
                       map(Number);
    
-    console.log(numbersArr)
+    // console.log(numbersArr)
     const res= numbersArr.reduce((sum, number)=>sum+number,0);
-    console.log(res)
+    // console.log(res)
     return res
 }
 
