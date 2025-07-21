@@ -1,6 +1,6 @@
 import React , {useState} from "react";
 import {addFn} from "../utils/stringCalculator"
-
+import "../StringCalculator.css"
 const StringCalculator =()=>{
     const [input, setInput] = useState("");
     const [result, setResult] =useState(null);
@@ -18,7 +18,8 @@ const StringCalculator =()=>{
     }
 
     return (
-        <>
+        <div className="container">
+            <h3>String Calculator</h3>
           <textarea 
              placeholder="Enter numbers to be added"
              value={input}
@@ -26,9 +27,9 @@ const StringCalculator =()=>{
              />
 
              <button onClick={()=>handleCalculate()}>Calculate</button>
-             {result !==null && <p>Result: {result}</p>}
-             {error && <p>{error}</p>}
-        </>
+             {result !==null && <p className="result">Result: {result}</p>}
+             {error && <p className="error">{error}</p>}
+        </div>
     )
 }
 
