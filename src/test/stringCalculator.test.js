@@ -10,4 +10,9 @@ describe("String Calculator",()=>{
     test("return the number when passes single number", ()=>{
         expect(addFn("3")).toBe(3)
     });
+
+    // test for 2 comma separated number
+    test("returens sum of comma separated number",()=>{
+        expect(addFn("3,5")).toBe(8)
+    })
 })
