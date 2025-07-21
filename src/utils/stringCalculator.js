@@ -13,5 +13,6 @@ export const addFn=(numbers)=>{
 }
 
 //  addFn("1,2");
-//  addFn("1,2,3,4,5,6")
+//  addFn("1,2,3,4,5,6");
+//  addFn("1,2\n3")
 
