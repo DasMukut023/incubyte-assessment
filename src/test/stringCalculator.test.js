@@ -30,5 +30,10 @@ describe("String Calculator",()=>{
     test("testcases for support different newline delimiters",()=>{
         expect(addFn("//;\n1;2")).toBe(3)
     });
-    
+    // test for single negative number input
+    test("throws error for single negative number input",()=>{
+        const input="1,-2,3";
+        expect(()=>addFn(input)).toThrow(`negative numbers not allowed -2`)
+
+    })
 })
