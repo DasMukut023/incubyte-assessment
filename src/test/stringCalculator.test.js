@@ -12,7 +12,12 @@ describe("String Calculator",()=>{
     });
 
     // test for 2 comma separated number
-    test("returens sum of comma separated number",()=>{
+    test("returns sum of two comma separated number",()=>{
         expect(addFn("3,5")).toBe(8)
-    })
+    });
+
+    // test for multiple comma separated number
+    test("returns sum of multiple comma separated number",()=>{
+        expect(addFn("1,2,4,5")).toBe(12)
+    });
 })
