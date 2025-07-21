@@ -20,4 +20,9 @@ describe("String Calculator",()=>{
     test("returns sum of multiple comma separated number",()=>{
         expect(addFn("1,2,4,5")).toBe(12)
     });
+
+    // test for newline delimiters
+    test("testcases for handles newline delimiters",()=>{
+        expect(addFn("1\n2,3")).toBe(6)
+    })
 })
