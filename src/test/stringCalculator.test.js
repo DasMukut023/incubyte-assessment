@@ -36,4 +36,10 @@ describe("String Calculator",()=>{
         expect(()=>addFn(input)).toThrow(`negative numbers not allowed -2`)
 
     })
+
+    // test for multiple negative number input
+    test("throws error for multiple negative number input",()=>{
+        const input="1,-2,-3";
+        expect(()=>addFn(input)).toThrow(`negative numbers not allowed -2,-3`)
+    })
 })
