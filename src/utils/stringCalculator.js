@@ -1,5 +1,13 @@
 export const addFn=(numbers)=>{
-
+    // console.log(numbers);
     if(numbers==="") return 0;
-    return parseInt(numbers);
+    const numbersArr= numbers.split(",").map(Number);
+   
+    // console.log(numbersArr)
+    const res= numbersArr.reduce((sum, number)=>sum+number,0);
+    // console.log(res)
+    return res
 }
+
+//  addFn("1,2");
+
