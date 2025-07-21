@@ -6,5 +6,8 @@ describe("String Calculator",()=>{
         expect(addFn("")).toBe(0)
     });
 
-    
+    // test for single input 
+    test("return the number when passes single number", ()=>{
+        expect(addFn("3")).toBe(3)
+    });
 })
