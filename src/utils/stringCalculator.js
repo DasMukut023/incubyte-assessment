@@ -10,8 +10,12 @@ export const addFn=(numbers)=>{
     const numbersArr= numbers.
                       split(delimiter).
                       map(Number);
-   
     // console.log(numbersArr)
+    const negativeNumber=numbersArr.find(n=>n<0);
+    // console.log(negativeNumber)
+    if(negativeNumber){
+        throw new Error(`negative numbers not allowed ${negativeNumber}`)
+    }
     const res= numbersArr.reduce((sum, number)=>sum+number,0);
     // console.log(res)
     return res
@@ -20,5 +24,6 @@ export const addFn=(numbers)=>{
 //  addFn("1,2");
 //  addFn("1,2,3,4,5,6");
 //  addFn("1,2\n3");
-//  addFn("//;\n1;2")
+//  addFn("//;\n1;2");
+//  addFn("1,-2,3")
 
