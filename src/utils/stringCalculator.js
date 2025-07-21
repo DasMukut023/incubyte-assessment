@@ -11,9 +11,9 @@ export const addFn=(numbers)=>{
                       split(delimiter).
                       map(Number);
     // console.log(numbersArr)
-    const negativeNumber=numbersArr.find(n=>n<0);
+    const negativeNumber=numbersArr.filter(n=>n<0);
     // console.log(negativeNumber)
-    if(negativeNumber){
+    if(negativeNumber.length){
         throw new Error(`negative numbers not allowed ${negativeNumber}`)
     }
     const res= numbersArr.reduce((sum, number)=>sum+number,0);
